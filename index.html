@@ -158,6 +158,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
         <li>Reminders, game night polls, AFK status, and your Steam profile if you link it.</li>
         <li>Who joins and leaves her voice channel, and when.</li>
         <li>Basic activity counts (how many chats and music commands, how long she was in voice) so her creator can keep her running well.</li>
+        <li>In servers that turn on her moderator features: the moderation actions she carries out, and her own records of server changes (see section 9).</li>
       </ul>
       <div class="note">
         <p><strong>Privacy between servers:</strong> what she learns about you in one server stays in that server. Things you tell her in DMs stay private, and she asks you before sharing them anywhere. General knowledge like slang, language tips and game tips can be used in every server.</p>
@@ -208,6 +209,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
     <section id="admins">
       <h2><span class="n">9</span>Server admins</h2>
       <p>If you add Kiri to a server, you're responsible for making sure your members are okay with an AI bot that reads messages sent to her and remembers things about people. Admins can choose how she chats: mention mode or live mode (<code>k!mentionmode</code>, <code>k!livemode</code>), one channel only (<code>k!chatlock</code>), and her home channel for announcements (<code>k!setdefault</code>). Removing Kiri from a server stops her from collecting anything new there.</p>
+      <p><strong>Moderator features.</strong> Admins can turn on Kiri's moderator features with <code>k!modchat</code>. She then helps members who already have the matching Discord permissions: nicknames, timeouts, kicks, bans, message cleanup, slowmode, locking channels, roles, pins and threads. She only acts on members below her role, asks the requester to confirm serious actions with a button, and logs every action in the server's mod chat. When someone is banned through her, she sends them the ban reason by DM first. While these features are on, she also keeps her own records of server changes (routine changes for the current month, major changes such as deleted channels, bans and new administrators permanently), only for that server. Moderators remain responsible for the actions they ask her to take.</p>
     </section>
 
     <section id="availability">
