@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Terms of Service for Kiri-chan, a Discord AI companion bot by QuackerOaths.">
+<title>Kiri-chan Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: one readable legal column (~68ch) with a compact contents list up top; Kiri's orange marks section numbers and links only. */
+:root {
+  --bg: #fbf9f7;
+  --surface: #f3eee9;
+  --fg: #221d1a;
+  --muted: #6b605a;
+  --line: #e2d9d1;
+  --accent: #c85a0c;
+  --accent-soft: #fbe6d4;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171412; --surface: #211c19; --fg: #efe8e2; --muted: #a89c94; --line: #352d28;
+    --accent: #ff9a4d; --accent-soft: #3a2517; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #171412; --surface: #211c19; --fg: #efe8e2; --muted: #a89c94; --line: #352d28;
+  --accent: #ff9a4d; --accent-soft: #3a2517; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  padding-inline: 20px;
+  padding-block: 0 64px;
+}
+.wrap { max-width: 44rem; margin: 0 auto; }
+header { padding-block: 56px 28px; border-bottom: 1px solid var(--line); }
+.tag {
+  display: inline-block; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700; margin-bottom: 10px;
+}
+h1 {
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 6vw, 2.9rem);
+  line-height: 1.08; margin: 0 0 14px; text-wrap: balance; letter-spacing: -0.01em;
+}
+.meta { color: var(--muted); font-size: .95rem; margin: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.lede { margin: 20px 0 0; font-size: 1.1rem; }
+nav { padding-block: 24px; border-bottom: 1px solid var(--line); }
+nav h2 { font-family: var(--font-display); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; font-weight: 600; }
+nav ol { margin: 0; padding: 0; list-style: none; columns: 2 14rem; column-gap: 28px; }
+nav li { break-inside: avoid; padding-block: 2px; font-variant-numeric: tabular-nums; }
+nav li span { color: var(--accent); display: inline-block; width: 2.1em; font-weight: 700; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+section { padding-block: 26px 4px; }
+section h2 {
+  font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; line-height: 1.25;
+  margin: 0 0 10px; text-wrap: balance; display: flex; gap: 12px; align-items: baseline;
+}
+section h2 .n { color: var(--accent); font-variant-numeric: tabular-nums; font-size: 1rem; min-width: 1.8em; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 1.2em; }
+li { margin-bottom: 6px; }
+code {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: .9em;
+  background: var(--surface); padding: 1px 5px; border-radius: 4px; border: 1px solid var(--line);
+}
+.note {
+  background: var(--accent-soft); border-radius: 10px; padding: 14px 16px; margin: 4px 0 16px;
+}
+.note p:last-child { margin-bottom: 0; }
+.contact {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 14px;
+}
+.contact .addr { font-weight: 700; user-select: all; word-break: break-all; }
+.contact button {
+  font: inherit; font-size: .9rem; border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+  border-radius: 8px; padding: 4px 12px; cursor: pointer;
+}
+.contact button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="tag">Discord bot · Legal</span>
+    <h1>Kiri-chan Terms of Service</h1>
+    <p class="meta"><span>Effective: September 29, 2026</span><span>Last updated: September 29, 2026</span></p>
+    <p class="lede">These terms cover your use of Kiri (also called Kiri-chan), a Discord bot made by QuackerOaths. By adding Kiri to a server, talking to her, or using any of her commands, you agree to these terms.</p>
+  </header>
+
+  <nav aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><span>1</span><a href="#about">About Kiri</a></li>
+      <li><span>2</span><a href="#who">Who can use Kiri</a></li>
+      <li><span>3</span><a href="#ai">AI-generated replies</a></li>
+      <li><span>4</span><a href="#data">What Kiri remembers</a></li>
+      <li><span>5</span><a href="#voice">Voice and pictures</a></li>
+      <li><span>6</span><a href="#third">Other services Kiri uses</a></li>
+      <li><span>7</span><a href="#rules">Rules for using Kiri</a></li>
+      <li><span>8</span><a href="#music">Music</a></li>
+      <li><span>9</span><a href="#admins">Server admins</a></li>
+      <li><span>10</span><a href="#availability">Availability and changes</a></li>
+      <li><span>11</span><a href="#ownership">Ownership</a></li>
+      <li><span>12</span><a href="#warranty">No warranty</a></li>
+      <li><span>13</span><a href="#liability">Limitation of liability</a></li>
+      <li><span>14</span><a href="#ending">Ending access</a></li>
+      <li><span>15</span><a href="#updates">Updates to these terms</a></li>
+      <li><span>16</span><a href="#law">Governing law</a></li>
+      <li><span>17</span><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2><span class="n">1</span>About Kiri</h2>
+      <p>Kiri is a friendly AI companion for Discord. She chats in text channels and DMs, plays music from YouTube and Spotify, knows games like Dota 2 and League of Legends, organizes game nights, sets reminders, and joins in on the fun with jokes, roasts and GIFs. In some servers she can also talk and listen in voice channels.</p>
+      <p>Kiri is a hobby project run by one person ("QuackerOaths", "we", "us"). She is not made by, affiliated with, or endorsed by Discord, OpenAI, Valve, Riot Games, Google, Spotify or any other company mentioned here.</p>
+    </section>
+
+    <section id="who">
+      <h2><span class="n">2</span>Who can use Kiri</h2>
+      <p>You must be old enough to use Discord in your country (at least 13 in most places) and follow <a href="https://discord.com/terms">Discord's Terms of Service</a> and <a href="https://discord.com/guidelines">Community Guidelines</a>. If you are under the age of majority where you live, use Kiri only with your parent's or guardian's permission.</p>
+    </section>
+
+    <section id="ai">
+      <h2><span class="n">3</span>AI-generated replies</h2>
+      <p>Kiri's replies are written by artificial intelligence. That means:</p>
+      <ul>
+        <li>She can be wrong. Game stats, builds, news, weather and anything she looks up online may be outdated or incorrect. Double-check anything important.</li>
+        <li>She shares opinions. When she says what she thinks, it's her playful take, not fact.</li>
+        <li>She is not a professional. Nothing she says is medical, legal, financial, mental-health or safety advice. In an emergency, contact local emergency services.</li>
+        <li>Roasts, teasing and jokes are meant as friendly barkada banter. If something she says bothers you, tell her, opt out of roasts, or contact us.</li>
+      </ul>
+    </section>
+
+    <section id="data">
+      <h2><span class="n">4</span>What Kiri remembers</h2>
+      <p>To remember people and keep conversations going, Kiri stores some information, linked to your Discord user ID:</p>
+      <ul>
+        <li>Your Discord ID, username, display name and server roles.</li>
+        <li>Messages you send to her, and short notes she writes from them (for example, your favorite song or hero).</li>
+        <li>Things you tell her about yourself, songs you request, and your music stats.</li>
+        <li>Running jokes, slang and nicknames the group teaches her.</li>
+        <li>Reminders, game night polls, AFK status, and your Steam profile if you link it.</li>
+        <li>Who joins and leaves her voice channel, and when.</li>
+        <li>Basic activity counts (how many chats and music commands, how long she was in voice) so her creator can keep her running well.</li>
+      </ul>
+      <div class="note">
+        <p><strong>Privacy between servers:</strong> what she learns about you in one server stays in that server. Things you tell her in DMs stay private, and she asks you before sharing them anywhere. General knowledge like slang, language tips and game tips can be used in every server.</p>
+      </div>
+      <p><strong>Your choices:</strong> see what she remembers with <code>k!memory</code> and <code>k!profile</code>, erase her notes about you with <code>k!forget</code>, hide or remove your Steam link with <code>k!steam private</code> or <code>k!steam unlink</code>, and tell her anytime that you don't want to be roasted. For anything else, including a full deletion of your data, email us (section 17).</p>
+      <p>Your information is never sold. It is kept only for as long as Kiri needs it to work, and is stored on her creator's own computer, not on a public server.</p>
+    </section>
+
+    <section id="voice">
+      <h2><span class="n">5</span>Voice and pictures</h2>
+      <p><strong>Voice:</strong> in servers where her voice AI is turned on, Kiri listens to the voice channel she is in, turns speech into text, and may reply out loud. Everyone in that channel is heard, not only the person talking to her. Transcripts are handled like chat messages (section 4). In every other server, Kiri joins voice only to play music and is deafened, so she hears nothing.</p>
+      <p><strong>Pictures:</strong> when you tag Kiri with a picture or screenshot, she looks at it to reply. Pictures are used for that reply only and are not saved. Don't send pictures that show private information such as passwords, addresses or other people's private chats.</p>
+      <p>Kiri cannot watch live streams, screen shares, cameras or videos.</p>
+    </section>
+
+    <section id="third">
+      <h2><span class="n">6</span>Other services Kiri uses</h2>
+      <p>To work, Kiri sends the needed parts of your requests to outside services, each with its own terms and privacy policy:</p>
+      <ul>
+        <li><strong>OpenAI</strong>: understanding and writing her replies, reading pictures, and speech-to-text and voice in voice-AI servers.</li>
+        <li><strong>YouTube and Spotify</strong>: finding and playing the music you request.</li>
+        <li><strong>Steam</strong>: summaries of Steam profiles that people link.</li>
+        <li><strong>OpenDota</strong> and <strong>Riot Games Data Dragon</strong>: Dota 2 and League of Legends information.</li>
+        <li><strong>Open-Meteo</strong>: weather. <strong>GIPHY</strong>: reaction GIFs. <strong>Web search</strong>: current news and information.</li>
+      </ul>
+      <p>We are not responsible for how these services work or handle data.</p>
+    </section>
+
+    <section id="rules">
+      <h2><span class="n">7</span>Rules for using Kiri</h2>
+      <p>Don't use Kiri to:</p>
+      <ul>
+        <li>Harass, threaten, bully or target anyone, including with roasts.</li>
+        <li>Create or share hateful, sexual, violent or illegal content.</li>
+        <li>Dig up or spread other people's private information.</li>
+        <li>Spam her, flood her with requests, or try to get around her limits.</li>
+        <li>Trick her into breaking these rules, or attack, overload or reverse-engineer her.</li>
+        <li>Break Discord's rules or the law.</li>
+      </ul>
+      <p>Kiri may refuse requests that break these rules.</p>
+    </section>
+
+    <section id="music">
+      <h2><span class="n">8</span>Music</h2>
+      <p>Kiri plays music from YouTube and Spotify for personal listening with friends. She doesn't host or own any music. You are responsible for what you ask her to play and for following those platforms' terms and copyright rules. Music may sometimes fail to play if a source is unavailable.</p>
+    </section>
+
+    <section id="admins">
+      <h2><span class="n">9</span>Server admins</h2>
+      <p>If you add Kiri to a server, you're responsible for making sure your members are okay with an AI bot that reads messages sent to her and remembers things about people. Admins can choose how she chats: mention mode or live mode (<code>k!mentionmode</code>, <code>k!livemode</code>), one channel only (<code>k!chatlock</code>), and her home channel for announcements (<code>k!setdefault</code>). Removing Kiri from a server stops her from collecting anything new there.</p>
+    </section>
+
+    <section id="availability">
+      <h2><span class="n">10</span>Availability and changes</h2>
+      <p>Kiri runs on her creator's own hardware. She may go offline for updates, power outages, internet problems or breaks, and there is no guarantee she will always be online. Features may change, be limited, or be removed at any time; changes are listed in her patch notes (<code>k!patchnotes</code>). Kiri may be shut down permanently at any time.</p>
+    </section>
+
+    <section id="ownership">
+      <h2><span class="n">11</span>Ownership</h2>
+      <p>Kiri, including her code, name, personality, artwork and patch notes, is owned by QuackerOaths. All rights reserved. You may not copy, modify, distribute, sell, or create a copy of Kiri or any part of her without written permission. For permission, licensing or purchase inquiries, contact us (section 17).</p>
+      <p>You keep ownership of what you send to Kiri. By sending it, you let us use it only to run and improve Kiri as described in these terms.</p>
+    </section>
+
+    <section id="warranty">
+      <h2><span class="n">12</span>No warranty</h2>
+      <p>Kiri is provided "as is" and "as available", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted service.</p>
+    </section>
+
+    <section id="liability">
+      <h2><span class="n">13</span>Limitation of liability</h2>
+      <p>To the fullest extent allowed by law, QuackerOaths is not liable for any damages or losses from using or not being able to use Kiri, including anything she says, anything you do based on her replies, lost data, or problems caused by the outside services in section 6. Kiri is a free hobby project; use her at your own risk.</p>
+    </section>
+
+    <section id="ending">
+      <h2><span class="n">14</span>Ending access</h2>
+      <p>We may block any user or server from using Kiri, at any time and without notice, especially for breaking these terms. You can stop using Kiri anytime by not talking to her, or by removing her from your server.</p>
+    </section>
+
+    <section id="updates">
+      <h2><span class="n">15</span>Updates to these terms</h2>
+      <p>These terms may change as Kiri grows. The "Last updated" date at the top will change, and big changes may be mentioned in her patch notes. Continuing to use Kiri after a change means you accept the new terms.</p>
+    </section>
+
+    <section id="law">
+      <h2><span class="n">16</span>Governing law</h2>
+      <p>These terms are governed by the laws of the Republic of the Philippines. If any part of these terms can't be enforced, the rest still applies.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="n">17</span>Contact</h2>
+      <p>Questions, data requests, reports, or permission inquiries:</p>
+      <div class="contact">
+        <span class="addr" id="email">ponteras.cmd@gmail.com</span>
+        <button type="button" id="copy">Copy email</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc.</footer>
+</div>
+
+<script>
+  (function () {
+    var button = document.getElementById('copy');
+    var email = document.getElementById('email');
+    button.addEventListener('click', function () {
+      var text = email.textContent;
+      var done = function () { button.textContent = 'Copied'; setTimeout(function () { button.textContent = 'Copy email'; }, 1600); };
+      var fallback = function () {
+        var range = document.createRange();
+        range.selectNodeContents(email);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        button.textContent = 'Selected, press Ctrl+C';
+      };
+      try {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } catch (e) {
+        fallback();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
