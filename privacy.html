@@ -97,7 +97,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
   <header>
     <span class="tag">Discord bot · Privacy</span>
     <h1>Kiri-chan Privacy Policy</h1>
-    <p class="meta"><span>Effective: September 29, 2026</span><span>Last updated: September 30, 2026</span></p>
+    <p class="meta"><span>Effective: September 29, 2026</span><span>Last updated: <span data-kiri="last-updated">September 30, 2026</span></span></p>
     <p class="lede">Kiri remembers things so she can be a better friend. Here's exactly what she keeps, why, and how to make her forget.</p>
   </header>
   <nav aria-label="Contents">
@@ -122,6 +122,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
 <li><strong>Features you use:</strong> reminders, game night polls and RSVPs, AFK status, roast opt-outs, commands you use, and your Steam profile if you link it.</li>
 <li><strong>Match stats (servers only):</strong> when someone sends Kiri an end-of-match scoreboard screenshot or a Dota 2 match link, and the players confirm who is who, she saves each server member's in-game name, hero or character, kills/deaths/assists, one extra stat, and win or loss. Players nobody identifies (strangers, randoms) are not saved. People in that server can ask her about these stats (averages, win rates, leaderboards), and she may use them in Barkada Wrapped and friendly roasts there.</li>
 <li><strong>Moderation (only in servers that turn it on):</strong> actions she carries out for moderators (who asked, who it was for, the reason), posted in that server's mod chat, a history of the channels she creates or renames (so moderators can undo them), and her own records of server changes from Discord's audit log (who changed what, like deleted channels, bans, role changes). For events she creates, whether people said they are going; for a server's waiting lounge, who joined it (to alert moderators).</li>
+<li><strong>Crypto features:</strong> price alerts you set (coin, price, channel), your paper trading game wallet (fake money, per server), and her crypto predictions (coin, prediction, who asked) so she can check how accurate they were.</li>
 <li><strong>Reports and mod notes (servers only):</strong> reports you send to a server's moderators through Kiri (who reported, what, and why), and private notes moderators write about members. Both are only shown in that server's mod chat.</li>
 <li><strong>Scam link checks:</strong> in servers that turn on her moderator features, Kiri checks messages for fake Nitro or fake Steam links. Only scam messages are acted on: they are deleted, and a copy (with the links disabled) is posted in that server's mod chat. Other messages are not saved by this check.</li>
 <li><strong>Activity counts:</strong> numbers like how many messages and music commands she handled per server and per person, and how long she was in voice. These help keep her running smoothly.</li>
@@ -154,14 +155,18 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
       <h2><span class="n">5</span>Services Kiri shares data with</h2>
       <p>To work, Kiri sends the needed parts of a request to these services. Each has its own privacy policy:</p>
 <ul>
-<li><strong>OpenAI</strong>: your messages, pictures and voice audio, to write her replies, read pictures, and turn speech into text. Relevant memory notes are included so she remembers you.</li>
-<li><strong>YouTube and Spotify</strong>: song searches, to find and play music.</li>
-<li><strong>Steam</strong>: linked Steam profile IDs, for Steam summaries.</li>
-<li><strong>OpenDota</strong> and <strong>Riot Games Data Dragon</strong>: game lookups (hero, item, match IDs). No personal info is sent. Public Dota match data from OpenDota (like public Steam account IDs in a match) is used to recognize members who linked their Steam.</li>
-<li><strong>OpenStreetMap (Nominatim)</strong>: place names for events held outside Discord (no personal info). Map data © OpenStreetMap contributors.</li>
-<li><strong>Open-Meteo</strong> (locations you ask about), <strong>GIPHY</strong> (GIF searches), and <strong>web search</strong> (questions that need current info).</li>
-<li><strong>Discord</strong> itself, which carries every message.</li>
-<li><strong>GitHub</strong>: a daily backup copy of Kiri's database is stored in a private GitHub repository that only her creator can access, so nothing is lost if her hardware fails.</li>
+<li data-kiri-service="openai"><strong>OpenAI</strong>: your messages, pictures and voice audio, to write her replies, read pictures, and turn speech into text. Relevant memory notes are included so she remembers you.</li>
+<li data-kiri-service="elevenlabs"><strong>ElevenLabs</strong>: the text of her own replies in voice-AI servers, to turn them into her speaking voice. Your voice is not sent to ElevenLabs.</li>
+<li data-kiri-service="music"><strong>YouTube and Spotify</strong>: song searches, to find and play music.</li>
+<li data-kiri-service="steam"><strong>Steam</strong>: linked Steam profile IDs, for Steam summaries.</li>
+<li data-kiri-service="games"><strong>OpenDota</strong> and <strong>Riot Games Data Dragon</strong>: game lookups (hero, item, match IDs). No personal info is sent. Public Dota match data from OpenDota (like public Steam account IDs in a match) is used to recognize members who linked their Steam.</li>
+<li data-kiri-service="crypto"><strong>CoinGecko</strong> and <strong>Binance</strong> (public market data): coin names only, for prices and charts. No personal info is sent.</li>
+<li data-kiri-service="maps"><strong>OpenStreetMap (Nominatim)</strong>: place names for events held outside Discord (no personal info). Map data © OpenStreetMap contributors.</li>
+<li data-kiri-service="weather"><strong>WeatherAPI.com</strong> and <strong>Open-Meteo</strong>: locations you ask the weather for.</li>
+<li data-kiri-service="giphy"><strong>GIPHY</strong>: GIF searches.</li>
+<li data-kiri-service="websearch"><strong>Web search</strong>: questions that need current info.</li>
+<li data-kiri-service="discord"><strong>Discord</strong> itself, which carries every message.</li>
+<li data-kiri-service="github"><strong>GitHub</strong>: a daily backup copy of Kiri's database is stored in a private GitHub repository that only her creator can access, so nothing is lost if her hardware fails.</li>
 </ul>
 <p>Nothing is shared with anyone else, unless the law requires it.</p>
     </section>
@@ -214,7 +219,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
 </div>
     </section>
   </main>
-  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="./">Terms of Service</a></footer>
+  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="./">Terms of Service</a> · Kiri v<span data-kiri="version">0.53.1</span></footer>
 </div>
 <script>
   (function () {
