@@ -97,7 +97,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
   <header>
     <span class="tag">Discord bot · Legal</span>
     <h1>Kiri-chan Terms of Service</h1>
-    <p class="meta"><span>Effective: September 29, 2026</span><span>Last updated: September 30, 2026</span></p>
+    <p class="meta"><span>Effective: September 29, 2026</span><span>Last updated: <span data-kiri="last-updated">September 30, 2026</span></span></p>
     <p class="lede">These terms cover your use of Kiri (also called Kiri-chan), a Discord bot made by QuackerOaths. By adding Kiri to a server, talking to her, or using any of her commands, you agree to these terms.</p>
   </header>
 
@@ -144,6 +144,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
         <li>She can be wrong. Game stats, builds, news, weather and anything she looks up online may be outdated or incorrect. Double-check anything important.</li>
         <li>She shares opinions. When she says what she thinks, it's her playful take, not fact.</li>
         <li>She is not a professional. Nothing she says is medical, legal, financial, mental-health or safety advice. In an emergency, contact local emergency services.</li>
+        <li><strong>Crypto:</strong> her crypto prices, chart checks and predictions are information and entertainment only, never financial advice. Predictions come from a simple model, are often wrong, and are not guaranteed. Paper trading uses fake money. Never buy or sell real crypto because of something Kiri said; you are responsible for your own decisions.</li>
         <li>Roasts, teasing and jokes are meant as friendly barkada banter. If something she says bothers you, tell her, opt out of roasts, or contact us.</li>
       </ul>
     </section>
@@ -179,12 +180,17 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
       <h2><span class="n">6</span>Other services Kiri uses</h2>
       <p>To work, Kiri sends the needed parts of your requests to outside services, each with its own terms and privacy policy:</p>
       <ul>
-        <li><strong>OpenAI</strong>: understanding and writing her replies, reading pictures, and speech-to-text and voice in voice-AI servers.</li>
-        <li><strong>YouTube and Spotify</strong>: finding and playing the music you request.</li>
-        <li><strong>Steam</strong>: summaries of Steam profiles that people link.</li>
-        <li><strong>OpenDota</strong> and <strong>Riot Games Data Dragon</strong>: Dota 2 and League of Legends information.</li>
-        <li><strong>OpenStreetMap (Nominatim)</strong>: finding the places of events that happen outside Discord. Map data © OpenStreetMap contributors.</li>
-        <li><strong>Open-Meteo</strong>: weather. <strong>GIPHY</strong>: reaction GIFs. <strong>Web search</strong>: current news and information.</li>
+        <li data-kiri-service="openai"><strong>OpenAI</strong>: understanding and writing her replies, reading pictures, and speech-to-text in voice-AI servers.</li>
+        <li data-kiri-service="elevenlabs"><strong>ElevenLabs</strong>: turning her replies into her speaking voice in voice-AI servers.</li>
+        <li data-kiri-service="music"><strong>YouTube and Spotify</strong>: finding and playing the music you request.</li>
+        <li data-kiri-service="steam"><strong>Steam</strong>: summaries of Steam profiles that people link.</li>
+        <li data-kiri-service="crypto"><strong>CoinGecko and Binance</strong>: public crypto prices and chart data (coin names only).</li>
+        <li data-kiri-service="games"><strong>OpenDota</strong> and <strong>Riot Games Data Dragon</strong>: Dota 2 and League of Legends information.</li>
+        <li data-kiri-service="maps"><strong>OpenStreetMap (Nominatim)</strong>: finding the places of events that happen outside Discord. Map data © OpenStreetMap contributors.</li>
+        <li data-kiri-service="weather"><strong>WeatherAPI.com</strong> and <strong>Open-Meteo</strong>: weather.</li>
+        <li data-kiri-service="giphy"><strong>GIPHY</strong>: reaction GIFs.</li>
+        <li data-kiri-service="websearch"><strong>Web search</strong>: current news and information.</li>
+        <li data-kiri-service="github"><strong>GitHub</strong>: a private daily backup of her database, and hosting these pages.</li>
       </ul>
       <p>We are not responsible for how these services work or handle data.</p>
     </section>
@@ -260,7 +266,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
     </section>
   </main>
 
-  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="privacy.html">Privacy Policy</a></footer>
+  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="privacy.html">Privacy Policy</a> · Kiri v<span data-kiri="version">0.53.1</span></footer>
 </div>
 
 <script>
