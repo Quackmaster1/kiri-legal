@@ -126,7 +126,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
 <li><strong>Reports and mod notes (servers only):</strong> reports you send to a server's moderators through Kiri (who reported, what, and why), and private notes moderators write about members. Both are only shown in that server's mod chat.</li>
 <li><strong>Scam link checks:</strong> in servers that turn on her moderator features, Kiri checks messages for fake Nitro or fake Steam links. Only scam messages are acted on: they are deleted, and a copy (with the links disabled) is posted in that server's mod chat. Other messages are not saved by this check.</li>
 <li><strong>Activity counts:</strong> numbers like how many messages and music commands she handled per server and per person, and how long she was in voice. These help keep her running smoothly.</li>
-<li><strong>Friendship and how you like her to talk:</strong> a friendship level per server (it changes slowly as you talk with her), and preferences she learns from you, like shorter or longer replies, English or Taglish, no roasting, phrases you don't like, and which replies you reacted to with 👍 or 👎. These only change how she talks to you, in that server (or in your DMs).</li>
+<li><strong>Friendship and how you like her to talk:</strong> a friendship level per server (it changes slowly as you talk with her), and preferences she learns from you, like shorter or longer replies, English or Taglish, no roasting, phrases you don't like, and which replies you reacted to with 👍 or 👎. These only change how she talks to you, in that server (or in your DMs). The highest friendship levels take months of mostly positive conversations and can't be reached by spamming her.</li>
 <li><strong>Typed memories:</strong> besides short notes, specific things worth remembering (plans, projects, events, inside jokes), each marked as a fact, opinion, joke, or something someone else said (a claim), with how sure she is. Claims about other people are never treated as facts, and accusations about people are not saved.</li>
 <li><strong>Topics:</strong> which topics come up together in a server or DM, so she can follow conversations. Only topic words are kept, not messages.</li>
 <li><strong>General language patterns:</strong> short common phrases and slang (one to three words) she notices across servers, with counts of how often they appear. Where a pattern came from is not stored: servers and people are only counted through short one-way codes that can't be turned back into a server or user.</li>
@@ -162,7 +162,8 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
       <h2><span class="n">5</span>Services Kiri shares data with</h2>
       <p>To work, Kiri sends the needed parts of a request to these services. Each has its own privacy policy:</p>
 <ul>
-<li data-kiri-service="openai"><strong>OpenAI</strong>: your messages, pictures and voice audio, to write her replies, read pictures, and turn speech into text. Relevant memory notes are included so she remembers you.</li>
+<li data-kiri-service="openai"><strong>OpenAI</strong>: your messages, pictures and voice audio, to write her replies (mainly detailed, technical or research questions), read pictures, search the web when a question needs current information, and turn speech into text. Relevant memory notes are included so she remembers you.</li>
+<li data-kiri-service="deepseek"><strong>DeepSeek</strong>: the text of everyday chat messages, with the same relevant memory notes, to write quick casual replies. Pictures, voice audio and questions that need a web search are never sent to DeepSeek. Which service answers a message is decided by Kiri herself before anything is sent; it doesn't change what she remembers or who can see it.</li>
 <li data-kiri-service="elevenlabs"><strong>ElevenLabs</strong>: the text of her own replies in voice-AI servers, to turn them into her speaking voice. Your voice is not sent to ElevenLabs.</li>
 <li data-kiri-service="music"><strong>YouTube and Spotify</strong>: song searches, to find and play music.</li>
 <li data-kiri-service="steam"><strong>Steam</strong>: linked Steam profile IDs, for Steam summaries.</li>
@@ -202,6 +203,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
 <li>See what she remembers: <code>k!memory</code> and <code>k!profile</code>.</li>
 <li>Choose what's public or private on your profile: <code>k!profile</code>.</li>
 <li>Erase her memory notes, typed memories, friendship, learned preferences and match stats about you: <code>k!forget</code>. Forget one thing: <code>k!lore forget &lt;words&gt;</code>.</li>
+<li>Server admins (Manage Server) can clear what she remembers about one person in their server, or about everyone in it: <code>k!clearlore &lt;UserID&gt;</code> and <code>k!clearlore all</code>. This removes memories, memory notes, saved facts and conversation lines, "how we talk" notes and (for <code>all</code>) the server's own running jokes in that server only; it never shows what was remembered. Friendship levels, preferences and stats stay; use <code>k!forget</code> for those.</li>
 <li>Check your AI token: <code>k!tokenuser</code> (admins: <code>k!tokenserver</code>).</li>
 <li>Change how she talks to you: just tell her ("shorter please", "English please", "stop saying ...").</li>
 <li>Stop saving your match stats in a server (and delete the ones saved there): tell her "don't save my stats" / "wag mo i-save stats ko".</li>
@@ -232,7 +234,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
 </div>
     </section>
   </main>
-  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="./">Terms of Service</a> · Kiri v<span data-kiri="version">0.54.0</span></footer>
+  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="./">Terms of Service</a> · Kiri v<span data-kiri="version">0.55.0</span></footer>
 </div>
 <script>
   (function () {
