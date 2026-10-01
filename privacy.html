@@ -97,7 +97,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
   <header>
     <span class="tag">Discord bot · Privacy</span>
     <h1>Kiri-chan Privacy Policy</h1>
-    <p class="meta"><span>Effective: September 29, 2026</span><span>Last updated: <span data-kiri="last-updated">September 30, 2026</span></span></p>
+    <p class="meta"><span>Effective: September 29, 2026</span><span>Last updated: <span data-kiri="last-updated">October 1, 2026</span></span></p>
     <p class="lede">Kiri remembers things so she can be a better friend. Here's exactly what she keeps, why, and how to make her forget.</p>
   </header>
   <nav aria-label="Contents">
@@ -126,6 +126,12 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
 <li><strong>Reports and mod notes (servers only):</strong> reports you send to a server's moderators through Kiri (who reported, what, and why), and private notes moderators write about members. Both are only shown in that server's mod chat.</li>
 <li><strong>Scam link checks:</strong> in servers that turn on her moderator features, Kiri checks messages for fake Nitro or fake Steam links. Only scam messages are acted on: they are deleted, and a copy (with the links disabled) is posted in that server's mod chat. Other messages are not saved by this check.</li>
 <li><strong>Activity counts:</strong> numbers like how many messages and music commands she handled per server and per person, and how long she was in voice. These help keep her running smoothly.</li>
+<li><strong>Friendship and how you like her to talk:</strong> a friendship level per server (it changes slowly as you talk with her), and preferences she learns from you, like shorter or longer replies, English or Taglish, no roasting, phrases you don't like, and which replies you reacted to with 👍 or 👎. These only change how she talks to you, in that server (or in your DMs).</li>
+<li><strong>Typed memories:</strong> besides short notes, specific things worth remembering (plans, projects, events, inside jokes), each marked as a fact, opinion, joke, or something someone else said (a claim), with how sure she is. Claims about other people are never treated as facts, and accusations about people are not saved.</li>
+<li><strong>Topics:</strong> which topics come up together in a server or DM, so she can follow conversations. Only topic words are kept, not messages.</li>
+<li><strong>General language patterns:</strong> short common phrases and slang (one to three words) she notices across servers, with counts of how often they appear. Where a pattern came from is not stored: servers and people are only counted through short one-way codes that can't be turned back into a server or user.</li>
+<li><strong>AI tokens:</strong> if you or your server have a token: when it was activated (and by whom), when it expires, its budget, and how much was used. Token keys themselves are stored only as a one-way fingerprint. Each AI request is counted (server, person, feature, size, estimated cost, speed) so tokens are charged fairly.</li>
+<li><strong>Downtime records:</strong> when Kiri went offline and came back, and the reason if one was given (no personal information).</li>
 </ul>
 <p><strong>Pictures</strong> you tag her with are looked at for that one reply and are not saved (for scoreboards, only the numbers above are kept, never the picture). Kiri cannot see live streams, screen shares, cameras or videos.</p>
     </section>
@@ -148,7 +154,8 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
 <li>In DMs she won't share anything about other people.</li>
 <li>Moderation records and mod logs are kept per server and only shown to that server's moderators.</li>
 <li>Match stats and in-game names stay in the server where the match was shared.</li>
-<li>General knowledge (slang, language tips, game tips, jokes that aren't about a person) is shared across servers so she gets smarter everywhere.</li>
+<li>General knowledge (language tips, game tips) is shared across servers so she gets smarter everywhere. Slang and common phrasing are only shared after they show up across several servers and people, as general patterns, never with who or which server they came from. Running jokes stay in the server where she learned them.</li>
+<li>Your friendship level and the way you like her to talk are kept per server (and separately for DMs). They never unlock anyone's private information.</li>
 </ul>
     </section>
     <section id="share">
@@ -174,7 +181,11 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
       <h2><span class="n">6</span>How long it is kept</h2>
       <ul>
 <li><strong>Memory notes, facts, music stats, group jokes and messages:</strong> until you delete them, ask us to, or Kiri is shut down.</li>
-<li><strong>Activity counts:</strong> up to 90 days.</li>
+<li><strong>Activity counts and AI usage records:</strong> up to 90 days.</li>
+<li><strong>Friendship, learned preferences, typed memories and topics:</strong> until you use <code>k!forget</code> (which removes them in every server and DM), ask us to delete them, or Kiri is shut down. Each person keeps at most about 200 typed memories per server; the least useful old ones are removed first.</li>
+<li><strong>General language patterns:</strong> until they stop being used (about 180 days), or are removed.</li>
+<li><strong>Token records:</strong> while the token is active, and afterwards for accounting.</li>
+<li><strong>Sensitive information</strong> (passwords, keys, codes, card/bank/ID numbers, full name with address): not kept at all.</li>
 <li><strong>Match stats and in-game names:</strong> until you opt out, use <code>k!forget</code>, or ask us to delete them (each server keeps up to its latest 1,500 matches).</li>
 <li><strong>Voice session summaries</strong> (how long she was in voice, songs played): kept for monthly totals.</li>
 <li><strong>Reminders and game nights:</strong> until they're done or cancelled.</li>
@@ -190,7 +201,9 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
       <ul>
 <li>See what she remembers: <code>k!memory</code> and <code>k!profile</code>.</li>
 <li>Choose what's public or private on your profile: <code>k!profile</code>.</li>
-<li>Erase her memory notes and match stats about you: <code>k!forget</code>.</li>
+<li>Erase her memory notes, typed memories, friendship, learned preferences and match stats about you: <code>k!forget</code>. Forget one thing: <code>k!lore forget &lt;words&gt;</code>.</li>
+<li>Check your AI token: <code>k!tokenuser</code> (admins: <code>k!tokenserver</code>).</li>
+<li>Change how she talks to you: just tell her ("shorter please", "English please", "stop saying ...").</li>
 <li>Stop saving your match stats in a server (and delete the ones saved there): tell her "don't save my stats" / "wag mo i-save stats ko".</li>
 <li>Hide or remove your Steam link: <code>k!steam private</code> or <code>k!steam unlink</code>.</li>
 <li>Stop roasts about you: just tell her you don't want to be roasted.</li>
@@ -200,7 +213,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
     </section>
     <section id="safety">
       <h2><span class="n">8</span>How it is protected</h2>
-      <p>Kiri's data is stored on her creator's own private hardware, not on a public server, with daily backup copies in a private GitHub repository. Access to it and to her service keys is limited to her creator, and it is only used as described in this policy. No system is perfectly secure, so please don't share passwords, ID numbers, bank details or other sensitive information with her. She is set up not to save that kind of information about people.</p>
+      <p>Kiri's data is stored on her creator's own private hardware, not on a public server, with daily backup copies in a private GitHub repository. Access to it and to her service keys is limited to her creator, and it is only used as described in this policy. No system is perfectly secure, so please don't share passwords, ID numbers, bank details or other sensitive information with her. She checks messages for that kind of information before anything is saved or sent to an AI service, never saves it, and tells you to delete it.</p>
     </section>
     <section id="kids">
       <h2><span class="n">9</span>Children</h2>
@@ -219,7 +232,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
 </div>
     </section>
   </main>
-  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="./">Terms of Service</a> · Kiri v<span data-kiri="version">0.53.2</span></footer>
+  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="./">Terms of Service</a> · Kiri v<span data-kiri="version">0.54.0</span></footer>
 </div>
 <script>
   (function () {
