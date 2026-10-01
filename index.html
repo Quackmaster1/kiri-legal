@@ -184,7 +184,8 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
       <h2><span class="n">6</span>Other services Kiri uses</h2>
       <p>To work, Kiri sends the needed parts of your requests to outside services, each with its own terms and privacy policy:</p>
       <ul>
-        <li data-kiri-service="openai"><strong>OpenAI</strong>: understanding and writing her replies, reading pictures, and speech-to-text in voice-AI servers.</li>
+        <li data-kiri-service="openai"><strong>OpenAI</strong>: understanding and writing her replies (mainly detailed, technical and research questions), reading pictures, web search for current information, and speech-to-text in voice-AI servers.</li>
+        <li data-kiri-service="deepseek"><strong>DeepSeek</strong>: writing her quick replies in everyday casual chat (text only).</li>
         <li data-kiri-service="elevenlabs"><strong>ElevenLabs</strong>: turning her replies into her speaking voice in voice-AI servers.</li>
         <li data-kiri-service="music"><strong>YouTube and Spotify</strong>: finding and playing the music you request.</li>
         <li data-kiri-service="steam"><strong>Steam</strong>: summaries of Steam profiles that people link.</li>
@@ -220,7 +221,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
 
     <section id="admins">
       <h2><span class="n">9</span>Server admins</h2>
-      <p>If you add Kiri to a server, you're responsible for making sure your members are okay with an AI bot that reads messages sent to her and remembers things about people. Admins can choose how she chats: mention mode or live mode (<code>k!mentionmode</code>, <code>k!livemode</code>), one channel only (<code>k!chatlock</code>), and her home channel for announcements (<code>k!setdefault</code>). Removing Kiri from a server stops her from collecting anything new there.</p>
+      <p>If you add Kiri to a server, you're responsible for making sure your members are okay with an AI bot that reads messages sent to her and remembers things about people. Admins can choose how she chats: mention mode or live mode (<code>k!mentionmode</code>, <code>k!livemode</code>), one channel only (<code>k!chatlock</code>), and her home channel for announcements (<code>k!setdefault</code>). Removing Kiri from a server stops her from collecting anything new there. Admins (Manage Server) can also clear what she remembers about one member in their server, or about everyone in it, with <code>k!clearlore</code>.</p>
       <p><strong>Moderator features.</strong> Admins can turn on Kiri's moderator features with <code>k!modchat</code>. She then helps members who already have the matching Discord permissions: nicknames, timeouts, kicks, bans, message cleanup, slowmode, locking channels, roles, pins and threads. She only acts on members below her role, asks the requester to confirm serious actions with a button, and logs every action in the server's mod chat. When someone is banned through her, she sends them the ban reason by DM first. She can also copy channels, move members between voice channels (confirmed in chat), alert moderators who are in voice when someone waits in a "waiting lounge" channel, and create Discord events. People who click "Interested" on an event she created may get a reminder DM about two days before, asking if they are going. While these features are on, she also keeps her own records of server changes (routine changes for the current month, major changes such as deleted channels, bans and new administrators permanently), only for that server. Moderators remain responsible for the actions they ask her to take.</p>
     </section>
 
@@ -270,7 +271,7 @@ footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
     </section>
   </main>
 
-  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="privacy.html">Privacy Policy</a> · Kiri v<span data-kiri="version">0.54.0</span></footer>
+  <footer>© 2026 QuackerOaths. All rights reserved. Kiri is not affiliated with Discord Inc. · <a href="privacy.html">Privacy Policy</a> · Kiri v<span data-kiri="version">0.55.0</span></footer>
 </div>
 
 <script>
